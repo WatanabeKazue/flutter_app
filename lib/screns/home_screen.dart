@@ -22,18 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
-                ],
-              ),
-            ),
-            Expanded(
-              flex:1,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
                 ],
               ),
             ),
@@ -42,28 +32,30 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
-                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
                 ],
               ),
             ),
-
+            Expanded(
+              flex: 1,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1, child: _soundButton()), //TODO ボタン
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
-  Widget _soundButton(String displayText,int soundId) {
-    return Container(
-    child: EdgeInsets.all(8.0),
-        child: ElevatedButton("")
-     ),
-    );
+  Widget _soundButton() {
+    return ElevatedButton(
+        onPressed: () => Text("ここは消して自分で書く"),
+        child: Container());
   }
-
-
 }
-
-
-
