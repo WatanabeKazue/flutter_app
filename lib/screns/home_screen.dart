@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
-  _HomeScrState createState() => _HomeScrState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScrState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,8 +13,8 @@ class _HomeScrState extends State<HomeScreen> {
         title: Text("ツッコミマシーン"),
         centerTitle: true,
       ),
-      body: Expanded(
-        flex: 1,
+      body: Container(
+        padding: EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
             Expanded(
@@ -41,7 +41,7 @@ class _HomeScrState extends State<HomeScreen> {
               flex: 1,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
+                children: <Widget>[
                   Expanded(flex: 1,child: _soundButton()), //TODO ボタン
                   Expanded(flex: 1,child: _soundButton()), //TODO ボタン
                 ],
@@ -54,10 +54,11 @@ class _HomeScrState extends State<HomeScreen> {
     );
   }
 
-  Widget _soundButton() {
+  Widget _soundButton(String displayText,int soundId) {
     return Container(
-        chlid: RaisedButton(
-        ),
+    child: EdgeInsets.all(8.0),
+        child: ElevatedButton("")
+     ),
     );
   }
 
