@@ -13,7 +13,56 @@ class _HomeScrState extends State<HomeScreen> {
         title: Text("ツッコミマシーン"),
         centerTitle: true,
       ),
-      body: Container() ,
+      body: Expanded(
+        flex: 1,
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              flex: 1,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                ],
+              ),
+            ),
+            Expanded(
+              flex:1,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                ],
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                  Expanded(flex: 1,child: _soundButton()), //TODO ボタン
+                ],
+              ),
+            ),
+
+          ],
+        ),
+      ),
     );
   }
+
+  Widget _soundButton() {
+    return Container(
+        chlid: RaisedButton(
+        ),
+    );
+  }
+
+
 }
+
+
+
