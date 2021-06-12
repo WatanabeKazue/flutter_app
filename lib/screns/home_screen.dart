@@ -1,11 +1,29 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<DropdownMenuItem<int>>_memuItems = [];
+
+
+
+  int _numberOfQuestions = 0;
+
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setMenuItems();
+  }
+  void setMenuItems() {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +35,20 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
+            Image.asset("asset/images/ image_title.png"),
+            SizedBox(
+              height: 50.0,
+            ),
+            Text("問題数を選択して「スタート」ボタンを押してください")
+            SizedBox(
+              height:  75.0,
+            )
+            DropdownButton(
+             items: [DropdownButton( )],
+              items: [DropdownButton( )],
+              items: [DropdownButton( )],
+            ),
+
             Expanded(
               flex: 1,
               child: Row(
@@ -55,9 +87,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _soundButton() {
     return Container(
-        child: ElevatedButton(
+        child: ElevatedButton.icon(
       onPressed: () => null,
       child: Text("ここは消して自分で書く"),
     ));
   }
+
+
 }
