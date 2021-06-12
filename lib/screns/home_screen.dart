@@ -54,8 +54,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _soundButton() {
-    return ElevatedButton(
-        onPressed: () => Text("ここは消して自分で書く"),
-        child: Container());
+    return Container(
+        child: ElevatedButton(
+      onPressed: () => null,
+      child: Text("ここは消して自分で書く"),
+    ));
   }
 }
