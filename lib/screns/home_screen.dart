@@ -1,30 +1,13 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<DropdownMenuItem<int>>_memuItems = [];
 
-
-
-  int _numberOfQuestions = 0;
-
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    setMenuItems();
-  }
-  void setMenuItems() {
-
-  }
-
-  @override
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,18 +18,13 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.all(8.0),
         child: Column(
           children: <Widget>[
-            Image.asset("asset/images/ image_title.png"),
+            // Image.asset("asset/images/ image_title.png"),
             SizedBox(
               height: 50.0,
             ),
-            Text("問題数を選択して「スタート」ボタンを押してください")
+            Text("問題数を選択して「スタート」ボタンを押してください"),
             SizedBox(
-              height:  75.0,
-            )
-            DropdownButton(
-             items: [DropdownButton( )],
-              items: [DropdownButton( )],
-              items: [DropdownButton( )],
+              height: 75.0,
             ),
 
             Expanded(
@@ -86,12 +64,10 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget _soundButton() {
-    return Container(
-        child: ElevatedButton.icon(
-      onPressed: () => null,
-      child: Text("ここは消して自分で書く"),
-    ));
+   // TODO onPressedの中身とchildの中身は後で修正する
+    return ElevatedButton(
+      onPressed: () => print("あとで修正"),
+      child: Text("押してね"),
+    );
   }
-
-
 }
